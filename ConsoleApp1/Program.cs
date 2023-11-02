@@ -59,6 +59,13 @@ namespace ConsoleApp1
                     // goto OtherSchool; This is not a good practice
                     break;
             }
+<<<<<<< Updated upstream
         }
+=======
+
+            int[] numArray = { 1, 11, 22 };
+
+        }    
+>>>>>>> Stashed changes
     }
 }
