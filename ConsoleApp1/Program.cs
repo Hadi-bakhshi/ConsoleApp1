@@ -95,7 +95,7 @@ namespace ConsoleApp1
                 Console.WriteLine("copy : {0}", m);
             }
 
-            int[] numArray = {1,11,22}
+            int[] numArray = { 1, 11, 22 };
 
         }    
     }
