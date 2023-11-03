@@ -234,12 +234,12 @@ namespace ConsoleApp1
 
         static void Main(string[] args) 
         {
-            StringSection();
-            ArraysSection();
-            ExceptionHandlingSection();
-            LoopsSection();
-            OperatorsSection();
-            StringBuilderSection();
+            //StringSection();
+            //ArraysSection();
+            //ExceptionHandlingSection();
+            //LoopsSection();
+            //OperatorsSection();
+            //StringBuilderSection();
         }    
     }
 }
