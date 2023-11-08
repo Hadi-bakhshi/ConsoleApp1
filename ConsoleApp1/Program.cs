@@ -233,7 +233,6 @@ namespace ConsoleApp1
             sb2.Remove(11, 7);
             Console.WriteLine(sb2.ToString());
         }
-        // ----------------- END OF FUNCTIONS -----------------
         static void ExtensionMethod()
         {
             string example = "Let's talk dirty";
@@ -291,6 +290,7 @@ namespace ConsoleApp1
                 Console.WriteLine($"exception is {ex}");
             }
         }
+        // ----------------- END OF FUNCTIONS -----------------
         static void Main(string[] args)
         {
             //StringSection();
