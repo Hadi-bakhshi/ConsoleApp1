@@ -1,4 +1,7 @@
-﻿using System; // it is going to import the namespace that has some classes and functions
+﻿using ConsoleApp.Person;
+using Converter;
+using Extender;
+using System; // it is going to import the namespace that has some classes and functions
 using System.Globalization;
 using System.Text;
 
@@ -9,7 +12,7 @@ namespace ConsoleApp1
         // ----------------- FUNCTIONS -----------------
         static void PrintArray(int[] intArray, string msg)
         {
-            foreach(int i in intArray)
+            foreach (int i in intArray)
             {
                 Console.WriteLine("{0}: {1}", msg, i);
             }
@@ -231,7 +234,35 @@ namespace ConsoleApp1
             Console.WriteLine(sb2.ToString());
         }
         // ----------------- END OF FUNCTIONS -----------------
+        static void ExtensionMethod()
+        {
+            string example = "Let's talk dirty";
+            string reversed = example.Reverse();
+            Console.WriteLine("The first string is :{0} and reversed: {1}", example, reversed);
+        }
 
+        static void PracticeClassAndInterview()
+        {
+            var person = new Person()
+            {
+                Name = "hadi"
+            };
+            Console.WriteLine(person.GetFullName());
+        }
+        static void PracticeConversion()
+        {
+            var conversion = new Conversion(5, 6);
+
+            conversion.Increment();
+            conversion.Increment();
+            conversion.Increment();
+
+            conversion.Decrement();
+
+            int val = conversion.GetX();
+
+            Console.WriteLine("x is :{0}", val);
+        }
         static void Main(string[] args) 
         {
             //StringSection();
@@ -240,6 +271,11 @@ namespace ConsoleApp1
             //LoopsSection();
             //OperatorsSection();
             //StringBuilderSection();
+            ExtensionMethod();
+            PracticeClassAndInterview();
+            PracticeConversion();
+
+           
         }    
     }
 }
