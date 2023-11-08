@@ -263,7 +263,35 @@ namespace ConsoleApp1
 
             Console.WriteLine("x is :{0}", val);
         }
-        static void Main(string[] args) 
+
+        static void OverflowAndUnderflowExample()
+        {
+            try
+            {
+                int a = int.MinValue;
+                a--;
+                Console.WriteLine(a == int.MaxValue);
+
+                int maxInt = int.MaxValue; // maxInt is 2147483647
+                int result = maxInt + 1;   // This will cause an overflow, and result will be -2147483648
+
+                // underflow
+                float minFloat = float.Epsilon;
+                float result2 = minFloat / 10;
+                Console.WriteLine(result2);
+
+                short x = 1, y = 1;
+                /* short z = x + y;  compile time error => result is also an int, which cannot be implicitly cast
+                                                           back to a short (because it could cause loss of data)
+                */
+                short z = (short)(x + y);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"exception is {ex}");
+            }
+        }
+        static void Main(string[] args)
         {
             //StringSection();
             //ArraysSection();
@@ -271,11 +299,11 @@ namespace ConsoleApp1
             //LoopsSection();
             //OperatorsSection();
             //StringBuilderSection();
-            ExtensionMethod();
-            PracticeClassAndInterview();
-            PracticeConversion();
-
-           
-        }    
+            //ExtensionMethod();
+            //PracticeClassAndInterview();
+            //PracticeConversion();
+            //OverflowAndUnderflowExample();
+        }
+        
     }
 }
