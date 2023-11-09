@@ -290,6 +290,12 @@ namespace ConsoleApp1
                 Console.WriteLine($"exception is {ex}");
             }
         }
+        static void SpecialValues()
+        {
+            Console.WriteLine(double.PositiveInfinity);
+            Console.WriteLine(double.NaN);
+            Console.WriteLine(double.NegativeInfinity);
+        }
         // ----------------- END OF FUNCTIONS -----------------
         static void Main(string[] args)
         {
@@ -303,6 +309,7 @@ namespace ConsoleApp1
             //PracticeClassAndInterview();
             //PracticeConversion();
             //OverflowAndUnderflowExample();
+            SpecialValues();
         }
         
     }
