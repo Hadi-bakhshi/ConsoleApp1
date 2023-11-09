@@ -353,6 +353,14 @@ namespace ConsoleApp1
                 );
             GetSumMore(1, 2, 3, 4, 5, 6, 7, 776767);
         }
+        static void CharSection()
+        {
+            char copyrightSymbol = '\u00A9';
+            char omegaSymbol = '\u03A9';
+            char newLine = '\u000A';
+
+            Console.WriteLine("char vals: {0} | {1} | {2}", copyrightSymbol, omegaSymbol, newLine);
+        }
         // ----------------- END OF FUNCTIONS -----------------
         static void Main(string[] args)
         {
@@ -367,7 +375,8 @@ namespace ConsoleApp1
             //PracticeConversion();
             //OverflowAndUnderflowExample();
             //SpecialValues();
+            CharSection();
         }
-        
+
     }
 }
