@@ -361,6 +361,22 @@ namespace ConsoleApp1
 
             Console.WriteLine("char vals: {0} | {1} | {2}", copyrightSymbol, omegaSymbol, newLine);
         }
+        static void StringsSection()
+        {
+            string a = "Here's a tab:\t";
+            Console.WriteLine("The escape sequence - tab : {0}", a);
+            string a1 = "\\\\server\\fileshare\\helloworld.cs";
+            Console.WriteLine("Backslash is :{0}", a1);
+            string a2 = @"\\server\fileshare\helloworld.cs";
+            Console.WriteLine("verbatim: {0}", a2);
+            string escaped = "First Line\r\nSecond Line";
+            string verbatim = @"First Line
+Second Line";
+            // True if your text editor uses CR-LF line separators:
+            Console.WriteLine(escaped == verbatim);
+            string xml = @"<customer id=""123""></customer>";
+            Console.WriteLine(xml);
+        }
         // ----------------- END OF FUNCTIONS -----------------
         static void Main(string[] args)
         {
@@ -375,7 +391,8 @@ namespace ConsoleApp1
             //PracticeConversion();
             //OverflowAndUnderflowExample();
             //SpecialValues();
-            CharSection();
+            //CharSection();
+            StringsSection();
         }
 
     }
