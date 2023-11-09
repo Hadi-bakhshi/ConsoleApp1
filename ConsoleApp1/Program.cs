@@ -296,6 +296,63 @@ namespace ConsoleApp1
             Console.WriteLine(double.NaN);
             Console.WriteLine(double.NegativeInfinity);
         }
+        static void SayHello()
+        {
+            string name = "";
+            Console.WriteLine("What is your name: ");
+            name = Console.ReadLine();
+            Console.WriteLine("Hello {0}", name);
+        }
+        static double GetSum(double x = 1, double y = 1)
+        {
+            double sum = x + y;
+            Console.WriteLine("Sum is {0}", sum);
+            return sum;
+        }
+        static void DoubleIt(int x, out int solution)
+        {
+            solution = x * 2;
+        }
+
+        public static void Swap(ref int num3, ref int num4)
+        {
+            int temp = num3;
+            num3 = num4;
+            num4 = temp;
+        }
+        static double GetSumMore(params double[] nums)
+        {
+            double sum = 0;
+
+            foreach (int i in nums)
+            {
+                sum += i;
+            }
+            Console.WriteLine("Sum: {0}", sum);
+            return sum;
+        }
+
+        static void FunctionsSection()
+        {
+            // <Access Specifier> <Return Type> <Method Name>(Parameters)
+            // { <Body> }
+            SayHello();
+            GetSum(344, 543);
+            int solution;
+            DoubleIt(15, out solution);
+            Console.WriteLine("15 * 2 = {0}", solution);
+            // ---------------------------------------------
+            int num3 = 10;
+            int num4 = 20;
+            Console.WriteLine("Before swap num1 : {0} and num 2 : {1}",
+                num3, num4
+                );
+            Swap(ref num3, ref num4);
+            Console.WriteLine("After swap num1 : {0} and num 2 : {1}",
+                num3, num4
+                );
+            GetSumMore(1, 2, 3, 4, 5, 6, 7, 776767);
+        }
         // ----------------- END OF FUNCTIONS -----------------
         static void Main(string[] args)
         {
@@ -309,7 +366,7 @@ namespace ConsoleApp1
             //PracticeClassAndInterview();
             //PracticeConversion();
             //OverflowAndUnderflowExample();
-            SpecialValues();
+            //SpecialValues();
         }
         
     }
