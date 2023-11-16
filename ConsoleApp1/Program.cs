@@ -378,6 +378,38 @@ Second Line";
             string xml = @"<customer id=""123""></customer>";
             Console.WriteLine(xml);
         }
+
+        static void SwitchExpression()
+        {
+            int cardNumber = 12;
+            string cardName = cardNumber switch
+            {
+                13 => "king",
+                12 => "Queen",
+                11 => "Jack",
+                _ => "Pip card"
+            };
+
+            // tuple pattern 
+            string suite = "spades";
+            string cardName2 = (cardNumber, suite) switch
+            {
+                (13, "spades") => "king of spades",
+                (13, "clubs") => "king of clubs",
+                _ => "King of none"
+            };
+
+            bool x = true;
+            switch(x)
+            {
+                case bool b when b == true:
+                    Console.WriteLine("True!");
+                    break;
+                case bool b:
+                    Console.WriteLine("False!");
+                    break;
+            }
+        }
         // ----------------- END OF FUNCTIONS -----------------
         static void Main(string[] args)
         {
@@ -394,12 +426,13 @@ Second Line";
             //SpecialValues();
             //CharSection();
             StringsSection();
+            SwitchExpression();
 
-            var janati = new Person { Name = "janati" };
+            var person = new Person { Name = "person" };
 
             var mapper = new Mapper();
 
-            var mapResult = mapper.Map<TooleSag>(janati);
+            var mapResult = mapper.Map<Tester>(person);
 
 
 
