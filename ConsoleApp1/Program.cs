@@ -3,6 +3,7 @@ using Converter;
 using Extender;
 using System; // it is going to import the namespace that has some classes and functions
 using System.Globalization;
+using System.Reflection;
 using System.Text;
 
 namespace ConsoleApp1
@@ -393,6 +394,32 @@ Second Line";
             //SpecialValues();
             //CharSection();
             StringsSection();
+
+            var janati = new Person { Name = "janati" };
+
+            var mapper = new Mapper();
+
+            var mapResult = mapper.Map<TooleSag>(janati);
+
+
+
+
+
+            //Mapper<Conversion> mapper = new Mapper<Conversion>();
+            //Dictionary<string, MethodInfo> methods = mapper.GetMethods();
+            //foreach (var method in methods)
+            //{
+            //    Console.WriteLine($"Method name: {method.Key}, Return type: {method.Value.ReturnType}");
+            //}
+
+            
+            //Dictionary<string, PropertyInfo> properties = mapper.GetProperties();
+
+            //foreach (var property in properties)
+            //{
+            //    Console.WriteLine($"Property Name is : {property.Key}");
+            //}
+
         }
 
     }

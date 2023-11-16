@@ -2,10 +2,12 @@
 
 namespace Converter
 {
-    internal class Conversion
+    public class Conversion
     {
         public int x;
         public int y;
+
+        public int TestProperty { get; set; }
 
 
         public Conversion(int x, int y)
