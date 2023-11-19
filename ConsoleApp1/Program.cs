@@ -428,13 +428,14 @@ Second Line";
             StringsSection();
             SwitchExpression();
 
-            var person = new Person { Name = "person" };
+            //var person = new Person { Name = "person" };
 
-            var mapper = new Mapper();
+            //var mapper = new Mapper();
 
-            var mapResult = mapper.Map<Tester>(person);
+            //var mapResult = mapper.Map<Tester>(person);
 
-
+            UseSentence s =  new UseSentence();
+            s.ManipulateSentence();
 
 
 
