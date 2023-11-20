@@ -436,7 +436,7 @@ Second Line";
 
             UseSentence s =  new UseSentence();
             s.ManipulateSentence();
-
+           new ClassEducation().UpCasting();
 
 
             //Mapper<Conversion> mapper = new Mapper<Conversion>();
@@ -446,7 +446,7 @@ Second Line";
             //    Console.WriteLine($"Method name: {method.Key}, Return type: {method.Value.ReturnType}");
             //}
 
-            
+
             //Dictionary<string, PropertyInfo> properties = mapper.GetProperties();
 
             //foreach (var property in properties)
