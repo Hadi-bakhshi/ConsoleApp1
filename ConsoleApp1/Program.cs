@@ -400,7 +400,7 @@ Second Line";
             };
 
             bool x = true;
-            switch(x)
+            switch (x)
             {
                 case bool b when b == true:
                     Console.WriteLine("True!");
@@ -408,6 +408,17 @@ Second Line";
                 case bool b:
                     Console.WriteLine("False!");
                     break;
+            }
+        }
+        static void StimulateForEach()
+        {
+            List<int> ints = new List<int> { 3, 76, 343, 23, 987, 773, 21 };
+
+            IEnumerator<int> enumerator = ints.GetEnumerator();
+
+            while (enumerator.MoveNext())
+            {
+                Console.WriteLine(enumerator.Current);
             }
         }
         // ----------------- END OF FUNCTIONS -----------------
@@ -425,8 +436,8 @@ Second Line";
             //OverflowAndUnderflowExample();
             //SpecialValues();
             //CharSection();
-            StringsSection();
-            SwitchExpression();
+            //StringsSection();
+            //SwitchExpression();
 
             //var person = new Person { Name = "person" };
 
@@ -434,9 +445,9 @@ Second Line";
 
             //var mapResult = mapper.Map<Tester>(person);
 
-            UseSentence s =  new UseSentence();
-            s.ManipulateSentence();
-           new ClassEducation().UpCasting();
+            //UseSentence s = new UseSentence();
+            //s.ManipulateSentence();
+            //new ClassEducation().UpCasting();
 
 
             //Mapper<Conversion> mapper = new Mapper<Conversion>();
@@ -445,14 +456,13 @@ Second Line";
             //{
             //    Console.WriteLine($"Method name: {method.Key}, Return type: {method.Value.ReturnType}");
             //}
-
-
             //Dictionary<string, PropertyInfo> properties = mapper.GetProperties();
 
             //foreach (var property in properties)
             //{
             //    Console.WriteLine($"Property Name is : {property.Key}");
             //}
+            StimulateForEach();
 
         }
 
